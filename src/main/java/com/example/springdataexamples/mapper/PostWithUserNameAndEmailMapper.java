@@ -14,6 +14,7 @@ public interface PostWithUserNameAndEmailMapper {
 
   @Mapping(source = "user.name", target = "userName")
   @Mapping(source = "user.email", target = "email")
+  @Mapping(source = "commentsCount", target = "comments") // form getter method: getCommentsCount()
 
   PostWithUserNameAndEmailDTO toPostWithUserNameAndEmailDTOr(Post post);
   List<PostWithUserNameAndEmailDTO> toPostWithUserNameAndEmailDTO(List<Post> posts);  

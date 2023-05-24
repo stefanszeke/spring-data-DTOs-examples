@@ -1,0 +1,10 @@
+### get all users with posts and post comments
+GET http://localhost:8080/users
+
+### DTO get all users with posts and post comments
+GET http://localhost:8080/dto/users
+
+### DTO  get all posts with userName
+GET http://localhost:8080/dto/postsWithName
+### DTO  get all posts with userName and eamil
+GET http://localhost:8080/dto/postsWithNameAndEmail

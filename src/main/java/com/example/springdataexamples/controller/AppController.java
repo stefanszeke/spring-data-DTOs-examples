@@ -30,13 +30,13 @@ public class AppController {
     return appService.getAllUsersDTO();
   }
 
-  @GetMapping("/dto/posts")
+  @GetMapping("/dto/postsWithName")
   public List<PostWithUserNameDTO> getAllPostsWithUserDTO() {
     System.out.println("\nGetting all posts with userName DTOs...\n");
     return appService.getAllPostsWithUserDTO();
   }
 
-  @GetMapping("/dto/postsfull")
+  @GetMapping("/dto/postsWithNameAndEmail")
   public List<PostWithUserNameAndEmailDTO> getAllPostsWithUserNameAndEmailDTO() {
     System.out.println("\nGetting all posts with userName and email DTOs...\n");
     return appService.getAllPostsWithUserNameAndEmailDTO();

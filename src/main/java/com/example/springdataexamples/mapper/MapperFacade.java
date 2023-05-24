@@ -4,7 +4,6 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import com.example.springdataexamples.DTO.CommentDTO;
 import com.example.springdataexamples.DTO.PostWithUserNameAndEmailDTO;
 import com.example.springdataexamples.DTO.PostWithUserNameDTO;
 import com.example.springdataexamples.DTO.UserDTO;
@@ -32,7 +31,7 @@ public class MapperFacade {
   }
 
   public List<PostWithUserNameDTO> toPostWithUserDTO(List<Post> posts) {
-    return postWithUserNameMapper.toPostWithUserDTOs(posts);
+    return postWithUserNameMapper.toPostWithUserNameDTOs(posts);
   }
 
   public List<PostWithUserNameAndEmailDTO> toPostWithUserNameAndEmailMapper(List<Post> posts) {

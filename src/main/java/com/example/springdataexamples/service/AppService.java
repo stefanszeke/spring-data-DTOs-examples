@@ -2,7 +2,6 @@ package com.example.springdataexamples.service;
 
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.example.springdataexamples.DTO.PostWithUserNameAndEmailDTO;
@@ -10,8 +9,6 @@ import com.example.springdataexamples.DTO.PostWithUserNameDTO;
 import com.example.springdataexamples.DTO.UserDTO;
 import com.example.springdataexamples.Myutils.DataGenerator;
 import com.example.springdataexamples.mapper.MapperFacade;
-import com.example.springdataexamples.mapper.PostWithUserNameMapper;
-import com.example.springdataexamples.mapper.UserMapper;
 import com.example.springdataexamples.model.Comment;
 import com.example.springdataexamples.model.Post;
 import com.example.springdataexamples.model.User;
@@ -19,7 +16,7 @@ import com.example.springdataexamples.repository.CommentRepository;
 import com.example.springdataexamples.repository.PostRepository;
 import com.example.springdataexamples.repository.UserRepository;
 
-import jakarta.transaction.Transactional;
+
 
 @Service
 public class AppService {

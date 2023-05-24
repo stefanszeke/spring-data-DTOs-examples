@@ -1,15 +1,11 @@
 package com.example.springdataexamples.model;
 
-
 import java.util.ArrayList;
 import java.util.List;
 
-
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import jakarta.persistence.Entity;
-import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -32,13 +28,11 @@ public class User {
 
   private String email;
 
-  @OneToMany(mappedBy = "user"
-  )
+  @OneToMany(mappedBy = "user")
   @JsonIgnoreProperties("user") // This is needed to avoid infinite recursion
   private List<Post> posts = new ArrayList<>();
 
-  @OneToMany(mappedBy = "user"
-  )
+  @OneToMany(mappedBy = "user")
   @JsonIgnoreProperties("user")
   private List<Comment> comments = new ArrayList<>();
 
@@ -46,6 +40,5 @@ public class User {
     this.email = email;
     this.name = name;
   }
-  
-}
 
+}

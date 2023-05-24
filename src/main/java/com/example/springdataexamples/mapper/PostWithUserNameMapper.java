@@ -13,6 +13,6 @@ public interface PostWithUserNameMapper {
 
   @Mapping(source = "user.name", target = "userName")
 
-  PostWithUserNameDTO toPostWithUserDTO(Post post);
-  List<PostWithUserNameDTO> toPostWithUserDTOs(List<Post> posts);
+  PostWithUserNameDTO toPostWithUserNameDTO(Post post);
+  List<PostWithUserNameDTO> toPostWithUserNameDTOs(List<Post> posts);
 }

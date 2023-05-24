@@ -3,7 +3,6 @@ package com.example.springdataexamples.model;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import jakarta.persistence.Entity;
-import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -18,7 +17,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Table(name = "comments")
 public class Comment {
-  
+
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
@@ -27,7 +26,7 @@ public class Comment {
 
   @ManyToOne
   @JoinColumn(name = "post_id")
-  @JsonIgnoreProperties({"comments","user"})
+  @JsonIgnoreProperties({ "comments", "user" })
   private Post post;
 
   @ManyToOne
