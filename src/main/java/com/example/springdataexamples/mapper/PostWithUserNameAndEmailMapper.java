@@ -12,9 +12,11 @@ import com.example.springdataexamples.model.Post;
 @Mapper(componentModel = "spring")
 public interface PostWithUserNameAndEmailMapper {
 
-  @Mapping(source = "user.name", target = "userName")
+  @Mapping(source = "user.firstName", target = "firstName")
+  @Mapping(source = "user.lastName", target = "lastName")
   @Mapping(source = "user.email", target = "email")
-  @Mapping(source = "commentsCount", target = "comments") // form getter method: getCommentsCount()
+  @Mapping(source = "commentsCount", target = "comments" ) // form getter method: getCommentsCount()
+
 
   PostWithUserNameAndEmailDTO toPostWithUserNameAndEmailDTOr(Post post);
   List<PostWithUserNameAndEmailDTO> toPostWithUserNameAndEmailDTO(List<Post> posts);  

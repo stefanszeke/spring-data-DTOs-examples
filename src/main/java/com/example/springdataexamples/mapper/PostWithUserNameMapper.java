@@ -11,8 +11,7 @@ import com.example.springdataexamples.model.Post;
 @Mapper(componentModel = "spring")
 public interface PostWithUserNameMapper {
 
-  @Mapping(source = "user.name", target = "userName")
-
+  @Mapping(expression = "java(post.getUser().getFirstName() + ' ' + post.getUser().getLastName())", target = "userName")
   PostWithUserNameDTO toPostWithUserNameDTO(Post post);
   List<PostWithUserNameDTO> toPostWithUserNameDTOs(List<Post> posts);
 }

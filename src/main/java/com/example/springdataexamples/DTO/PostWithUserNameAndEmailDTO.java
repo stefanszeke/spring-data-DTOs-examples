@@ -9,6 +9,7 @@ public class PostWithUserNameAndEmailDTO {
   private Long id;
   private String subject;
   private int comments;
-  private String userName;
+  private String firstName;
+  private String lastName;
   private String email;
 }

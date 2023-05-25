@@ -24,7 +24,9 @@ public class User {
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private long id;
 
-  private String name;
+  private String firstName;
+
+  private String lastName;
 
   private String email;
 
@@ -36,9 +38,10 @@ public class User {
   @JsonIgnoreProperties("user")
   private List<Comment> comments = new ArrayList<>();
 
-  public User(String name, String email) {
+  public User(String firstName, String lastName, String email) {
     this.email = email;
-    this.name = name;
+    this.firstName = firstName;
+    this.lastName = lastName;
   }
 
 }

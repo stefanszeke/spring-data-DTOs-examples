@@ -23,10 +23,11 @@ public class DataGenerator {
     List<User> users = new ArrayList<>();
 
     for (int i = 0; i < NUM_USERS; i++) {
-      String name = faker.name().fullName();
-      String email = name.replaceAll(" ", ".").toLowerCase() + "@example.com";
+      String firstName = faker.name().firstName();
+      String lastName = faker.name().lastName();
+      String email = lastName.toLowerCase() + "@example.com";
 
-      User user = new User(name, email);
+      User user = new User(firstName, lastName, email);
       users.add(user);
     }
 
